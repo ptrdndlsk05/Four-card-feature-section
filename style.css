@@ -1,0 +1,57 @@
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: sans-serif; background-color: #fafafa; padding: 40px 20px; }
+
+.content { text-align: center; margin-bottom: 50px; }
+.content h1 { font-weight: 200; color: #4c4e61; }
+.content h2 { font-weight: 600; color: #4c4e61; margin-bottom: 15px; }
+
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-top: 4px solid;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px; 
+}
+
+.card img {
+  align-self: flex-end;
+  margin-top: 30px;
+}
+
+
+.cyan { border-color: cyan; }
+.crimson { border-color: crimson; }
+.orange { border-color: orange; }
+.dodgerblue { border-color: dodgerblue; }
+
+
+@media screen and (min-width: 950px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);   
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .card { margin-bottom: 0; }
+
+  #supervisor {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  #teambuilder { grid-column: 2; grid-row: 1; }
+  #karma { grid-column: 2; grid-row: 2; }
+
+  #calculator {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+}
